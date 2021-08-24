@@ -1,0 +1,14 @@
+footer {
+  background-color: #eee;
+}
+
+footer .container {
+  text-align: center;
+  margin: 0 auto;
+  vertical-align: middle;
+}
+
+footer p {
+  font-size: 1.5rem;
+  line-height: 20rem;
+}

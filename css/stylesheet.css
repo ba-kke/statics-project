@@ -1,0 +1,48 @@
+@charset "utf-8";
+
+:root {
+  --base-color: white;
+  --main-color: #00866b;
+  --main-color-light: #00866b1b;
+  --accent-color: blueviolet;
+  --accent-color-light: rgba(137, 43, 226, 0.083);
+  --black: black;
+  --sub-color: #edf1ec75;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  border: none;
+}
+
+body {
+  font-family: "IM Fell DW Pica SC", serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 960px) {
+  html {
+    font-size: 72.5%;
+  }
+
+  .container {
+    width: 85%;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  html {
+    font-size: 40%;
+  }
+}

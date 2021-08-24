@@ -1,0 +1,38 @@
+header {
+  height: 8rem;
+  background-color: var(--base-color);
+}
+
+header .container {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: var(--main-color);
+  font-family: 'Caveat', cursive;
+}
+
+header nav {
+  display: flex;
+  list-style: none;
+}
+
+header li {
+  font-size: 1.2rem;
+  padding: 0 2rem;
+}
+
+/* 固定用追加クラス */
+.add-fixed {
+	left: 0;
+	position: fixed;
+	top: 0;
+}
+
+.separate {
+  color: var(--main-color);
+}
