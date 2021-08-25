@@ -41,7 +41,7 @@
 
 /* メインコンテンツ */
 .content {
-  padding: 5rem 0 5rem;
+  padding: 5rem 0 0;
   text-align: center;
 }
 
@@ -102,9 +102,7 @@
   width: 85%;
   background: var(--main-color-light);
   padding: 2rem 0;
-  /* background-position: center;
-  background-size: cover; */
-  /* background-color: rgba(137, 43, 226, 0.06); */
+  border-radius: 0 5rem 5rem 0;
 }
 
 .price .item {
@@ -172,6 +170,7 @@
   width: 85%;
   background: var(--main-color-light);
   padding: 2rem 0;
+  border-radius: 5rem 0 0 5rem;
 }
 
 .q-a {
@@ -201,11 +200,16 @@
 }
 
 /* ライター紹介 */
+.introduction {
+  padding: 5rem 0 5rem;
+}
+
 .introduction .container {
   width: 70%;
   background-color: var(--main-color-light);
   text-align: left;
   padding: 5rem 30rem;
+  border-radius: 5rem;
 }
 
 .introduction h3 {
