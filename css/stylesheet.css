@@ -3,7 +3,8 @@
 :root {
   --base-color: white;
   --main-color: #00866b;
-  --main-color-light: #00866b1b;
+  /* --main-color-light: #00866b1b; */
+  --main-color-light: #e4f2ef;
   --accent-color: blueviolet;
   --accent-color-light: rgba(137, 43, 226, 0.083);
   --black: black;

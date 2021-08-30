@@ -1,0 +1,52 @@
+main {
+  background-image: url(../img/wedding-2.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+#formWrap {
+}
+
+#formWrap {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+#formWrap h3 {
+  width: 45%;
+  margin: 0 auto 3rem;
+  padding: 0.5rem 0;
+  font-size: 5rem;
+  border-bottom: 5px double var(--main-color);
+  font-family: 'Caveat', cursive;
+}
+
+#formWrap > p {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+
+#formWrap form {
+  background: var(--main-color-light);
+  width: 70%;
+  margin: 0 auto;
+  text-align: left;
+  padding: 5rem 10%;
+  border-radius: 5rem;
+}
+
+#formWrap table {
+  margin: 0 auto;
+}
+
+#formWrap table td,#formWrap table th {
+  font-size: 1.5rem;
+  word-wrap: unset;
+  border: 2px solid var(--main-color);
+  padding: 1rem;
+}
+
+#formWrap .submit .reset {
+  font-size: 2rem;
+}

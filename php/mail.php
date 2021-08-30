@@ -30,7 +30,7 @@ if (version_compare(PHP_VERSION, '5.1.0', '>=')) {//PHP5.1.0以上の場合の�
 //---------------------------　必須設定　必ず設定してください　-----------------------
 
 //サイトのトップページのURL　※デフォルトでは送信完了後に「トップページへ戻る」ボタンが表示されますので
-$site_top = "https://ba-kke.github.io/statics-project";
+$site_top = "https://www.first-bake.com/statics-project";
 
 //管理者のメールアドレス ※メールを受け取るメールアドレス(複数指定する場合は「,」で区切ってください 例 $to = "aa@aa.aa,bb@bb.bb";)
 $to = "obakebake1223@gmail.com";
@@ -52,7 +52,7 @@ $Referer_check = 1;
 
 //リファラチェックを「する」場合のドメイン ※設置するサイトのドメインを指定して下さい。
 //もしこの設定が間違っている場合は送信テストですぐに気付けます。
-// $Referer_check_domain = "ba-kke.github.io";
+$Referer_check_domain = "first-bake.com";
 
 /*セッションによるワンタイムトークン（CSRF対策、及びスパム防止）(する=1, しない=0)
 ※ただし、この機能を使う場合は↓の送信確認画面の表示が必須です。（デフォルトではON（1）になっています）
@@ -81,10 +81,10 @@ $confirmDsp = 1;
 // 送信完了後に自動的に指定のページ(サンクスページなど)に移動する(する=1, しない=0)
 // CV率を解析したい場合などはサンクスページを別途用意し、URLをこの下の項目で指定してください。
 // 0にすると、デフォルトの送信完了画面が表示されます。
-$jumpPage = 0;
+$jumpPage = 1;
 
 // 送信完了後に表示するページURL（上記で1を設定した場合のみ）※httpから始まるURLで指定ください。（相対パスでも基本的には問題ないです）
-$thanksPage = "https://ba-kke.github.io/statics-project/";
+$thanksPage = "https://www.first-bake.com/statics-project";
 
 // 必須入力項目を設定する(する=1, しない=0)
 $requireCheck = 1;
@@ -219,9 +219,9 @@ if(empty($errm)){
 		}
 	}
 }
-
+  
 if(($confirmDsp == 0 || $sendmail == 1) && $empty_flag != 1){
-
+	
 	//トークンチェック（CSRF対策）※確認画面がONの場合のみ実施
 	if($useToken == 1 && $confirmDsp == 1){
 		if(empty($_SESSION['mailform_token']) || ($_SESSION['mailform_token'] !== $_POST['mailform_token'])){
@@ -230,7 +230,7 @@ if(($confirmDsp == 0 || $sendmail == 1) && $empty_flag != 1){
 		if(isset($_SESSION['mailform_token'])) unset($_SESSION['mailform_token']);//トークン破棄
 		if(isset($_POST['mailform_token'])) unset($_POST['mailform_token']);//トークン破棄
 	}
-
+	
 	//差出人に届くメールをセット
 	if($remail == 1) {
 		$userBody = mailToUser($_POST,$dsp_name,$remail_text,$mailFooterDsp,$mailSignature,$encode);
@@ -241,7 +241,7 @@ if(($confirmDsp == 0 || $sendmail == 1) && $empty_flag != 1){
 	$adminBody = mailToAdmin($_POST,$subject,$mailFooterDsp,$mailSignature,$encode,$confirmDsp);
 	$header = adminHeader($userMail,$post_mail,$BccMail,$to);
 	$subject = "=?iso-2022-jp?B?".base64_encode(mb_convert_encoding($subject,"JIS",$encode))."?=";
-
+	
 	//-fオプションによるエンベロープFrom（Return-Path）の設定(safe_modeがOFFの場合かつ上記設定がONの場合のみ実施)
 	if($use_envelope == 0){
 		mail($to,$subject,$adminBody,$header);
@@ -642,7 +642,7 @@ function refererCheck($Referer_check,$Referer_check_domain){
 	}
 }
 function copyright(){
-	echo '<a style="display:block;text-align:center;margin:15px 0;font-size:11px;color:#aaa;text-decoration:none" href="../layout/contact.html" target="_blank">- 榊原 -</a>';
+	echo '<a style="display:block;text-align:center;margin:15px 0;font-size:11px;color:#aaa;text-decoration:none" href="https://www.first-bake.com/mail_form/contact.html" target="_blank">- 榊原 -</a>';
 }
 //----------------------------------------------------------------------
 //  関数定義(END)
