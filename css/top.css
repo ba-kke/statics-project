@@ -41,7 +41,7 @@
 
 /* メインコンテンツ */
 .content {
-  padding: 5rem 0 0;
+  padding: 10rem 0 0;
   text-align: center;
 }
 
@@ -233,7 +233,7 @@
 
 /* ライター紹介 */
 .introduction {
-  padding: 5rem 0;
+  padding: 10rem 0 0;
 }
 
 .introduction .each-img {

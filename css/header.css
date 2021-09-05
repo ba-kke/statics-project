@@ -1,6 +1,7 @@
 header {
   height: 8rem;
   background-color: var(--base-color);
+  width: 100vw;
 }
 
 header .container {
@@ -26,13 +27,14 @@ header li {
   padding: 0 2rem;
 }
 
+.separate {
+  color: var(--main-color);
+}
+
 /* 固定用追加クラス */
 .add-fixed {
 	left: 0;
 	position: fixed;
 	top: 0;
-}
-
-.separate {
-  color: var(--main-color);
+  z-index: 100;
 }

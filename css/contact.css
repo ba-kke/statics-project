@@ -2,9 +2,7 @@ main {
   background-image: url(../img/wedding-2.jpg);
   background-size: cover;
   background-position: center;
-}
-
-#formWrap {
+  margin-top: 0;
 }
 
 #formWrap {
@@ -49,4 +47,20 @@ main {
 
 #formWrap .submit .reset {
   font-size: 2rem;
+}
+
+#formWrap p {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
+
+#formWrap .submit, #formWrap .reset {
+  border-radius: 1rem;
+  border: 2px solid var(--main-color);
+  padding: 0.5rem;
+}
+
+textarea {
+  resize: none;
 }
